@@ -1,5 +1,4 @@
 // Copyright (c) 2017 The Zoin Developers
-// Created by Matthew Tawil
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -60,15 +59,15 @@ void CommunityPage::OpenTwitter(){
     QDesktopServices::openUrl(QUrl(twitter));
 }
 void CommunityPage::OpenSlack(){
-    QString slack = "http://slack.zoinofficial.com/";
+    QString slack = "https://discord.gg/mE3KemF";
     QDesktopServices::openUrl(QUrl(slack));
 }
 void CommunityPage::OpenFacebook(){
-    QString fb = "https://www.facebook.com/ZoinProject/";
+    QString fb = "https://www.facebook.com/officialzoin";
     QDesktopServices::openUrl(QUrl(fb));
 }
 void CommunityPage::OpenSlackInv(){
-    QString slackInv = "http://slack.zoinofficial.com/";
+    QString slackInv = "https://t.me/zoinofficial";
     QDesktopServices::openUrl(QUrl(slackInv));
 }
 void CommunityPage::OpenGit(){

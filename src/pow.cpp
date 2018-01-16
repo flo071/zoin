@@ -18,22 +18,6 @@
 
 static CBigNum bnProofOfWorkLimit(~arith_uint256(0) >> 16);
 
-double GetDifficultyHelper(unsigned int nBits) {
-    int nShift = (nBits >> 24) & 0xff;
-    double dDiff = (double) 0x0000ffff / (double) (nBits & 0x00ffffff);
-
-    while (nShift < 29) {
-        dDiff *= 256.0;
-        nShift++;
-    }
-    while (nShift > 29) {
-        dDiff /= 256.0;
-        nShift--;
-    }
-
-    return dDiff;
-}
-
 static const int64_t nTargetSpacing = 150; // 2.5 minute blocks
 static const int64_t nRetargetInterval = 3; // retargets every 3 blocks
 static const int64_t nRetargetTimespan = nRetargetInterval * nTargetSpacing; // 7.5 minutes between retargets
